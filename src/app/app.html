@@ -1,14 +1,14 @@
+
+
 <ion-menu [content]="content">
-    <ion-content>
+    <ion-content class="menu-content myBg">
         <img src="assets/imagenes/logo.png" alt="">
         <ion-list>
-            <button menuClose  ion-item *ngFor="let p of pages" (click)="openPage(p)">
+            <button color="belize_hole" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
             <ion-icon item-left name="{{p.icono}}"></ion-icon>
             {{p.titulo}}
         </button>
         </ion-list>
     </ion-content>
 </ion-menu>
-
-
 <ion-nav [root]="rootPage" #content></ion-nav>
