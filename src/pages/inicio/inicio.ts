@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the InicioPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { DetallePage } from '../detalle/detalle';
 
 @IonicPage()
 @Component({
@@ -17,7 +12,9 @@ export class InicioPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
+  goToDetalleNew(IdNew){
+    this.navCtrl.push(DetallePage, {IdNew:IdNew});
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad InicioPage');
   }

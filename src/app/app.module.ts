@@ -9,6 +9,7 @@ import { InicioPage } from '../pages/inicio/inicio';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { ContactoPage } from '../pages/contacto/contacto';
 import { AcercaPage } from '../pages/acerca/acerca';
+import { DetallePage } from '../pages/detalle/detalle';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AcercaPage } from '../pages/acerca/acerca';
     InicioPage,
     PerfilPage,
     ContactoPage,
-    AcercaPage
+    AcercaPage, 
+    DetallePage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { AcercaPage } from '../pages/acerca/acerca';
     InicioPage,
     PerfilPage,
     ContactoPage,
-    AcercaPage
+    AcercaPage,
+    DetallePage
   ],
   providers: [
     StatusBar,
