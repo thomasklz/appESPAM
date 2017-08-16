@@ -1,8 +1,9 @@
 
 
 <ion-menu [content]="content">
-    <ion-content class="menu-content myBg">
-        <img src="assets/imagenes/logo.png" alt="">
+    <ion-content class="menu-content myBg user">
+        <img src="assets/imagenes/user.png" alt="">
+        <h1>Thomas Loor</h1>
         <ion-list>
             <button color="belize_hole" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
             <ion-icon item-left name="{{p.icono}}"></ion-icon>

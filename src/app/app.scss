@@ -2,13 +2,30 @@
     width:255px; 
     height: 40px; }
 .myBg{
-    background-color: #2758AE  ; }
+    background-color: #CCD2DC  ; }
 .new-title{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14px;
     text-align: left;
-    background-color: #EEF0F5;
+    background-color: #DADDE3;
     padding-left: 10px;
-    padding-top: 7px;
-    height: 30px;
-}    
+    padding-top: 10px;
+    height: 40px;
+    text-transform: uppercase
+}   
+.user {
+    img {
+      margin:   10px 25% 10px ;
+      display:  block;
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+    }
+  
+    h1 {
+      color:      #333;
+      margin:     10px 0 20px;
+      text-align: center;
+    }
+  
+  } 
