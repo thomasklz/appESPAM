@@ -1,26 +1,22 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { DetallePage } from '../detalle/detalle';
 import { NoticiasServicesProvider } from '../../providers/noticias-services/noticias-services';
-
+import { DetallePage } from '../detalle/detalle';
 
 @IonicPage()
 @Component({
-  selector: 'page-inicio',
-  templateUrl: 'inicio.html',
-  providers: [ NoticiasServicesProvider ]
+  selector: 'page-noticia',
+  templateUrl: 'noticia.html',
+  providers: [NoticiasServicesProvider]
 })
-export class InicioPage {
-
+export class NoticiaPage {
   public arNoticias: any;
-
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public notiServe: NoticiasServicesProvider) {
     this.arNoticias = [];
-
   }
   goToDetalleNew(IdNew) {
     this.navCtrl.push(DetallePage, { IdNew: IdNew });

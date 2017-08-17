@@ -7,21 +7,21 @@ import { HttpModule } from '@angular/http';
 
 
 import { MyApp } from './app.component';
-import { InicioPage } from '../pages/inicio/inicio';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { ContactoPage } from '../pages/contacto/contacto';
 import { AcercaPage } from '../pages/acerca/acerca';
 import { DetallePage } from '../pages/detalle/detalle';
 import { NoticiasServicesProvider } from '../providers/noticias-services/noticias-services';
+import { TabPage } from '../pages/tab/tab';
 
 @NgModule({
   declarations: [
     MyApp,
-    InicioPage,
     PerfilPage,
     ContactoPage,
     AcercaPage, 
-    DetallePage
+    DetallePage,
+    TabPage
   ],
   imports: [
     BrowserModule,
@@ -31,11 +31,11 @@ import { NoticiasServicesProvider } from '../providers/noticias-services/noticia
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    InicioPage,
     PerfilPage,
     ContactoPage,
     AcercaPage,
-    DetallePage
+    DetallePage,
+    TabPage
   ],
   providers: [
     StatusBar,

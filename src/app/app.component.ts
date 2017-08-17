@@ -3,23 +3,23 @@ import { Nav,Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { InicioPage } from '../pages/inicio/inicio';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { ContactoPage } from '../pages/contacto/contacto';
 import { AcercaPage } from '../pages/acerca/acerca';
+import { TabPage } from '../pages/tab/tab';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  rootPage: any = InicioPage;
+  rootPage: any = TabPage;
   pages: Array<{titulo: string, component:any, icono:string}>;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     
     this.pages=[
-        { titulo: 'Inicio', component:InicioPage, icono:'home' },
+        { titulo: 'Inicio', component:TabPage, icono:'home' },
         { titulo: 'Perfil', component:PerfilPage, icono:'person' },
         { titulo: 'Expediente', component:PerfilPage, icono:'albums' },
         { titulo: 'Consulta libros', component:PerfilPage, icono:'search' },
@@ -30,7 +30,7 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
-      splashScreen.hide();
+      splashScreen.show();
     });
   }
 
