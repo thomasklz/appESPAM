@@ -11,6 +11,7 @@ import { PerfilPage } from '../pages/perfil/perfil';
 import { ContactoPage } from '../pages/contacto/contacto';
 import { AcercaPage } from '../pages/acerca/acerca';
 import { DetallePage } from '../pages/detalle/detalle';
+import { ExpedientePage } from '../pages/expediente/expediente';
 import { NoticiasServicesProvider } from '../providers/noticias-services/noticias-services';
 import { TabPage } from '../pages/tab/tab';
 
@@ -21,6 +22,7 @@ import { TabPage } from '../pages/tab/tab';
     ContactoPage,
     AcercaPage, 
     DetallePage,
+    ExpedientePage,
     TabPage
   ],
   imports: [
@@ -35,6 +37,7 @@ import { TabPage } from '../pages/tab/tab';
     ContactoPage,
     AcercaPage,
     DetallePage,
+    ExpedientePage,
     TabPage
   ],
   providers: [
