@@ -1,17 +1,62 @@
 <ion-header>
-  <ion-navbar color="green">
-    <button ion-button menuToggle>
+    <ion-navbar color="light">
+        <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-    <ion-buttons end>
-      <button ion-button icon-only>
-            <ion-icon name="exit"></ion-icon>
-          </button>
-    </ion-buttons>
-    <ion-title>Perfil</ion-title>
-  </ion-navbar>
+        <ion-title>
+            <h6 >Perfil de usuario</h6>
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="user myBg">
+    <span padding> <img  src="assets/imagenes/user.png" alt=""></span>
+    <h1 class="myTextPrimary">Thomas Loor</h1>
+    <ion-list>
+        <ion-grid no-padding>
+            <ion-row ion-item>
+                <ion-col class="txtBlack">
+                    Nombre:
+                </ion-col>
+                <ion-col>
+                    Alfonso Thomas
+                </ion-col>
+            </ion-row>
+            <ion-row ion-item>
+                <ion-col class="txtBlack">
+                    Apellidos:
+                </ion-col>
+                <ion-col>
+                    Loor Vera
+                </ion-col>
+            </ion-row>
+            <ion-row ion-item>
+                <ion-col class="txtBlack">
+                    Cédula:
+                </ion-col>
+                <ion-col>
+                    1311655938
+                </ion-col>
+            </ion-row>
+            <ion-item-divider color="light">Académico</ion-item-divider>
+            <ion-row ion-item>
+                <ion-col class="txtBlack">
+                    Semestre actual:
+                </ion-col>
+                <ion-col>
+                    Primero
+                </ion-col>
+            </ion-row>
+            <ion-row ion-item>
+                <ion-col class="txtBlack">
+                    Código matrícula:
+                </ion-col>
+                <ion-col>
+                    xd01445
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-list>
+
 
 </ion-content>
