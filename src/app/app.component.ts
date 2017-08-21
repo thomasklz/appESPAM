@@ -8,6 +8,7 @@ import { ContactoPage } from '../pages/contacto/contacto';
 import { AcercaPage } from '../pages/acerca/acerca';
 import { TabPage } from '../pages/tab/tab';
 import { ExpedientePage } from '../pages/expediente/expediente';
+import { LibrosPage } from '../pages/libros/libros'
 
 @Component({
   templateUrl: 'app.html'
@@ -23,7 +24,7 @@ export class MyApp {
         { titulo: 'Inicio', component:TabPage, icono:'home' },
         { titulo: 'Perfil', component:PerfilPage, icono:'person' },
         { titulo: 'Expediente', component:ExpedientePage, icono:'albums' },
-        { titulo: 'Consulta libros', component:PerfilPage, icono:'search' },
+        { titulo: 'Consulta libros', component:LibrosPage, icono:'search' },
         { titulo: 'Contacto', component:ContactoPage, icono:'mail' },
         { titulo: 'Acerca de', component:AcercaPage, icono:'information-circle' }
     ];
