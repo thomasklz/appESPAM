@@ -4,7 +4,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      <h6>Expediente</h6>
+      <span class="h7">Expediente</span>
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -13,19 +13,22 @@
   <ion-content>
     <ion-list>
       <ion-item-divider color="light">ASIGNATURAS</ion-item-divider>
-      <button ion-item>
-               Matemáticas
-              <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
+      <button ion-item (click)="pushPage()">
+        <ion-icon  color ="green" name="checkmark-circle-outline" item-start no-padding></ion-icon> 
+          Matemáticas
+        <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
       </button>
-      <button ion-item>
-               Programación Web I
-              <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
+      <button ion-item (click)="pushPage()">
+        <ion-icon  color ="green" name="checkmark-circle-outline" item-start no-padding></ion-icon> 
+          Programación Web I
+        <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
       </button>
-      <button ion-item>
-        Programación Web II
-       <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
+      <button ion-item (click)="pushPage()">
+        <ion-icon  color ="green" name="checkmark-circle-outline" item-start no-padding></ion-icon>    
+          Programación Web II
+        <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
       </button>
-      <button ion-item>
+      <button ion-item (click)="pushPage()">
         Prática de Sistemas
        <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
       </button>
@@ -34,8 +37,9 @@
        <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
       </button>
       <button ion-item>
-        Estadística
-       <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
+        <ion-icon  color ="green" name="checkmark-circle-outline" item-start no-padding></ion-icon> 
+          Estadística
+        <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
       </button>
       <button ion-item>
         Matemáticas

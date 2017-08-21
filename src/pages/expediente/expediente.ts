@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the ExpedientePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import {DetalleMateriasPage} from '../detalle-materias/detalle-materias'
 
 @IonicPage()
 @Component({
@@ -16,6 +11,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ExpedientePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+  
+  pushPage(){
+    this.navCtrl.push(DetalleMateriasPage, {
+      idMateria: "123"
+    });
   }
 
   ionViewDidLoad() {
