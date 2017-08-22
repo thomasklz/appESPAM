@@ -14,8 +14,9 @@ import { DetallePage } from '../pages/detalle/detalle';
 import { ExpedientePage } from '../pages/expediente/expediente';
 import { NoticiasServicesProvider } from '../providers/noticias-services/noticias-services';
 import { TabPage } from '../pages/tab/tab';
-import { DetalleMateriasPage } from '../pages/detalle-materias/detalle-materias'
-import { LibrosPage } from '../pages/libros/libros'
+import { DetalleMateriasPage } from '../pages/detalle-materias/detalle-materias';
+import { LibrosPage } from '../pages/libros/libros';
+import { MateriasPage } from '../pages/materias/materias';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LibrosPage } from '../pages/libros/libros'
     ExpedientePage,
     TabPage,
     DetalleMateriasPage,
-    LibrosPage
+    LibrosPage,
+    MateriasPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { LibrosPage } from '../pages/libros/libros'
     ExpedientePage,
     TabPage,
     DetalleMateriasPage,
-    LibrosPage
+    LibrosPage,
+    MateriasPage
   ],
   providers: [
     StatusBar,

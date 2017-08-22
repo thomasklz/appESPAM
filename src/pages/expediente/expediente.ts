@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import {DetalleMateriasPage} from '../detalle-materias/detalle-materias'
+import {MateriasPage} from '../materias/materias';
 
 @IonicPage()
 @Component({
@@ -13,8 +13,8 @@ export class ExpedientePage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   
-  pushPage(){
-    this.navCtrl.push(DetalleMateriasPage, {
+  pushPageMateria(){
+    this.navCtrl.push(MateriasPage, {
       idMateria: "123"
     });
   }

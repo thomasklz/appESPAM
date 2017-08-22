@@ -4,51 +4,28 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      <span class="h7">Expediente</span>
+      <span class="h7">Semestres</span>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-content>
-    <ion-list>
-      <ion-item-divider color="light">ASIGNATURAS</ion-item-divider>
-      <button ion-item (click)="pushPage()">
-        <ion-icon  color ="green" name="checkmark-circle-outline" item-start no-padding></ion-icon> 
-          Matemáticas
-        <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
-      </button>
-      <button ion-item (click)="pushPage()">
-        <ion-icon  color ="green" name="checkmark-circle-outline" item-start no-padding></ion-icon> 
-          Programación Web I
-        <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
-      </button>
-      <button ion-item (click)="pushPage()">
-        <ion-icon  color ="green" name="checkmark-circle-outline" item-start no-padding></ion-icon>    
-          Programación Web II
-        <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
-      </button>
-      <button ion-item (click)="pushPage()">
-        Prática de Sistemas
-       <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
-      </button>
-      <button ion-item>
-        Ingeniería del Software
-       <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
-      </button>
-      <button ion-item>
-        <ion-icon  color ="green" name="checkmark-circle-outline" item-start no-padding></ion-icon> 
-          Estadística
-        <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
-      </button>
-      <button ion-item>
-        Matemáticas
-       <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
-      </button>
-      <button ion-item>
-        Programación Web I
-       <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
-      </button>
-    </ion-list>
-  </ion-content>
+  <ion-list>
+    <button ion-item (click)="pushPageMateria()">
+      Primero
+      <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
+    </button>
+    <button  ion-item (click)="pushPageMateria()">
+      Segundo
+      <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
+    </button>
+    <button ion-item (click)="pushPageMateria()">
+      Tercero
+      <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
+    </button>
+    <button  ion-item (click)="pushPageMateria()">
+      Cuarto
+      <ion-icon name="ios-arrow-forward" color="dark" item-end class="arrowNext"></ion-icon>
+    </button>
+  </ion-list>
 </ion-content>
