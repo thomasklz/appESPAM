@@ -1,16 +1,22 @@
 <ion-header>
-  <ion-navbar color="green">
+  <ion-navbar color="light">
     <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-    <ion-buttons end>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <span class="h7">Contacto</span>
+    </ion-title>
+    <ion-buttons (click)="sendEmail()" end>
       <button ion-button icon-only>
-            <ion-icon name="exit"></ion-icon>
-          </button>
+          <ion-icon name="mail"></ion-icon>
+        </button>
     </ion-buttons>
-    <ion-title>Contacto</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding>
-
+<ion-content class="card-background-page" no-padding>
+  <ion-card>
+    <img src="assets/imagenes/logo-espam-contact.png" />
+    <div class="card-title"> Notespam</div>
+    <div class="card-subtitle">Versión: 1.0.0</div>
+  </ion-card>
 </ion-content>

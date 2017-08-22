@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the AcercaPage page.
+ * Generated class for the SesionPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-acerca',
-  templateUrl: 'acerca.html',
+  selector: 'page-sesion',
+  templateUrl: 'sesion.html',
 })
-export class AcercaPage {
+export class SesionPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AcercaPage');
+    console.log('ionViewDidLoad SesionPage');
   }
 
 }

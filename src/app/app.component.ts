@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { PerfilPage } from '../pages/perfil/perfil';
 import { ContactoPage } from '../pages/contacto/contacto';
-import { AcercaPage } from '../pages/acerca/acerca';
+import { SesionPage } from '../pages/sesion/sesion';
 import { TabPage } from '../pages/tab/tab';
 import { ExpedientePage } from '../pages/expediente/expediente';
 import { LibrosPage } from '../pages/libros/libros'
@@ -25,8 +25,8 @@ export class MyApp {
         { titulo: 'Perfil', component:PerfilPage, icono:'person' },
         { titulo: 'Expediente', component:ExpedientePage, icono:'albums' },
         { titulo: 'Consulta libros', component:LibrosPage, icono:'search' },
-        { titulo: 'Contacto', component:ContactoPage, icono:'mail' },
-        { titulo: 'Acerca de', component:AcercaPage, icono:'information-circle' }
+        { titulo: 'Contáctanos', component:ContactoPage, icono:'mail' },
+        { titulo: 'Cerrar sesión', component:SesionPage, icono:'exit' }
     ];
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

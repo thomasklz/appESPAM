@@ -4,12 +4,12 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule } from '@angular/http';
-
+import { EmailComposer } from '@ionic-native/email-composer';
 
 import { MyApp } from './app.component';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { ContactoPage } from '../pages/contacto/contacto';
-import { AcercaPage } from '../pages/acerca/acerca';
+import { SesionPage } from '../pages/sesion/sesion';
 import { DetallePage } from '../pages/detalle/detalle';
 import { ExpedientePage } from '../pages/expediente/expediente';
 import { NoticiasServicesProvider } from '../providers/noticias-services/noticias-services';
@@ -23,7 +23,7 @@ import { MateriasPage } from '../pages/materias/materias';
     MyApp,
     PerfilPage,
     ContactoPage,
-    AcercaPage, 
+    SesionPage, 
     DetallePage,
     ExpedientePage,
     TabPage,
@@ -41,7 +41,7 @@ import { MateriasPage } from '../pages/materias/materias';
     MyApp,
     PerfilPage,
     ContactoPage,
-    AcercaPage,
+    SesionPage,
     DetallePage,
     ExpedientePage,
     TabPage,
@@ -53,7 +53,8 @@ import { MateriasPage } from '../pages/materias/materias';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    NoticiasServicesProvider
+    NoticiasServicesProvider,
+    EmailComposer
   ]
 })
 export class AppModule {}

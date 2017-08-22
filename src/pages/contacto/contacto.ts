@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the ContactoPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { EmailComposer } from '@ionic-native/email-composer';
 
 @IonicPage()
 @Component({
@@ -15,9 +9,38 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ContactoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+                public navCtrl: NavController, 
+                public navParams: NavParams,
+                private emailComposer: EmailComposer
+              ){
+                
   }
 
+  // this.emailComposer.isAvailable().then((available: boolean) =>{
+  //   if(available) {
+  //     console.log('email view dismissed');
+  //   }
+  //  });
+
+  sendEmail() {
+    let email = {
+      to: 'saimon@devdactic.com',
+      cc: 'max@mustermann.de',
+      attachments: [
+        'file://img/logo.png',
+        'res://icon.png',
+        'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
+        'file://README.pdf'
+      ],
+      subject: 'My Cool Image',
+      body: 'Hey Simon, what do you thing about this image?',
+      isHtml: true
+    };
+ 
+    this.emailComposer.open(email);
+  }
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContactoPage');
   }
