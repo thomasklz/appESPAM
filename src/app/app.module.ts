@@ -17,6 +17,7 @@ import { TabPage } from '../pages/tab/tab';
 import { DetalleMateriasPage } from '../pages/detalle-materias/detalle-materias';
 import { LibrosPage } from '../pages/libros/libros';
 import { MateriasPage } from '../pages/materias/materias';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MateriasPage } from '../pages/materias/materias';
     TabPage,
     DetalleMateriasPage,
     LibrosPage,
-    MateriasPage
+    MateriasPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { MateriasPage } from '../pages/materias/materias';
     TabPage,
     DetalleMateriasPage,
     LibrosPage,
-    MateriasPage
+    MateriasPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

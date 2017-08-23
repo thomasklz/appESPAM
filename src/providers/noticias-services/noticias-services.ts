@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 export class NoticiasServicesProvider {
 
   constructor(public http: Http) {
-    //console.log('Hello NoticiasServicesProvider Provider');
+    //console.log('Hello NoticiasServicesProvider Provider');https://api.deezer.com
   }
 
   getNoticias(){
