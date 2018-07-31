@@ -11,7 +11,7 @@ export class NoticiasServicesProvider {
   }
 
   getNoticias(){
-   return this.http.get('/deezer/user/2529/playlists')
+   return this.http.get('https://api.deezer.com/user/2529/playlists')
     .map(res => res.json());
   }
 
