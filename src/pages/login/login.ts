@@ -21,11 +21,11 @@ export class LoginPage {
       usuario: ['', Validators.required],
       contraseña: ['', Validators.required]
     });
+
   }
 
   logForm() {
     this.navCtrl.push(TabPage);
-    console.log(this.todo.value)
   }
 
   ionViewDidLoad() {
