@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule } from '@angular/http';
 import { EmailComposer } from '@ionic-native/email-composer';
+import { LottieAnimationViewModule } from 'lottie-angular2';
 
 import { MyApp } from './app.component';
 import { PerfilPage } from '../pages/perfil/perfil';
@@ -36,7 +37,8 @@ import { LoginPage } from '../pages/login/login';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    LottieAnimationViewModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
