@@ -1,3 +1,19 @@
-page-libros {
-
-}
+ #rounded {
+    
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 10px;
+  		background-color:#F1F1F1;
+    }
+  ion-item {
+	height: auto;
+	width: auto;
+  }
+  .fon11{
+  	font-size: 11px !important;
+  	letter-spacing: 0.5px !important;
+  }
+  .fon12{
+  	font-size:12px !important;
+  	letter-spacing: 0.5px !important;
+  }

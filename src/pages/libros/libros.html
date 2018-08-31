@@ -1,19 +1,36 @@
 <ion-header>
-    <ion-navbar color="light">
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>
-        <span class="h7">Buscar libros</span>
-      </ion-title>
+    <ion-navbar mode="ios">
+        <ion-buttons start>
+            <button ion-button menuToggle icon-only>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-input [(ngModel)]="txtbook" placeholder="Buscar libro" id='rounded'  clearInput='true'></ion-input>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="SearchBooks();">
+                <ion-icon name="search"></ion-icon>
+            </button>
+        </ion-buttons>
     </ion-navbar>
-  </ion-header>
+</ion-header>
 
-<ion-content padding>
-    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-    <ion-list>
-      <ion-item *ngFor="let item of items">
-        {{ item }}
-      </ion-item>
-    </ion-list>
+
+
+<ion-content>
+  <ion-list>
+  <ion-item *ngFor="let books of book">
+    <ion-thumbnail item-start>
+      <img src="https://images-na.ssl-images-amazon.com/images/P/9702607957.01.TZZZZZZZ.jpg">
+    </ion-thumbnail>
+    <h2 class="fon12" text-wrap> {{ books.title }}</h2>
+    <p class="fon11" text-wrap><ion-icon name="person" ios="ios-person" md="md-person" style="font-size: 14px;"></ion-icon> {{ books.author }}</p>
+    <span *ngFor="let itemsbook of books.itemsbiblioteca">
+      <p class="fon11" text-wrap>Editor:  {{itemsbook.place}}, {{itemsbook.publishercode}} </p>
+      <p class="fon11" text-wrap>ISBN:  {{itemsbook.isbn}}</p>
+      <p class="fon11" text-wrap>Pag:  {{itemsbook.pages}}</p>
+    </span>
+    <button ion-button clear item-end (click)="goToDetailBook(books.biblionumber);">Detalle</button>
+  </ion-item>
+</ion-list>
 </ion-content>
+

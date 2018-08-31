@@ -2,7 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav,Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 import * as $ from 'jquery';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { ContactoPage } from '../pages/contacto/contacto';
@@ -20,15 +19,26 @@ import { LoginPage } from '../pages/login/login';
                   [width]="300"
                   [height]="600"
                   (animCreated)="handleAnimation($event)">
-            </lottie-animation-view>
-            </div><div id='mostrar' class='ocultar'><ion-nav [root]="rootPage" #content>
-              </ion-nav>
+                  </lottie-animation-view>
+                  </div>
+                  <div id='mostrar' class='ocultar'><ion-menu [content]="content">
+                  <ion-content class="menu-content myBg user">
+                      <img src="assets/imagenes/user.png" alt="">
+                      <h1>Thomas Loor</h1>
+                      <ion-list>
+                          <button color="belize_hole" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                          <ion-icon item-left name="{{p.icono}}"></ion-icon>
+                          {{p.titulo}}
+                      </button>
+                      </ion-list>
+                  </ion-content>
+                </ion-menu><ion-nav [root]="rootPage" #content></ion-nav>
              </div>`
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   rootPage: any = LoginPage;
-  notification : Array<any> = [];
+
   pages: Array<{titulo: string, component:any, icono:string}>;
   //lottie
   public lottieConfig: Object;
@@ -46,11 +56,11 @@ export class MyApp {
     ];
     platform.ready().then(() => {
       statusBar.styleDefault();
-      splashScreen.show();
+      splashScreen.hide();
     });
 
     this.lottieConfig = {
-      path: 'assets/working.json',
+      path: 'assets/paprika_marketing_logo.json',
       autoplay: true,
       loop: true
     };

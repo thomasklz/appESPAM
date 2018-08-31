@@ -1,12 +1,11 @@
 <ion-header>
-  <ion-toolbar color="light">
-    <ion-title>
-      <h6 text-center>Iniciar sesión</h6>
-    </ion-title>
-  </ion-toolbar>
+  <ion-navbar>
+     <h6 text-center>Iniciar sesión</h6>
+  </ion-navbar>
 </ion-header>
 <ion-content padding class="BgSesion">
-  <div text-center><img src="assets/imagenes/logo-espam-header.png" alt=""></div>
+
+  <div text-center style="padding-top: 40px;"><img src="assets/imagenes/logo-espam-header.png" alt=""></div>
   <form [formGroup]="todo" (ngSubmit)="logForm()">
     <ion-list>
       <ion-item>

@@ -18,7 +18,8 @@ import { TabPage } from '../pages/tab/tab';
 import { DetalleMateriasPage } from '../pages/detalle-materias/detalle-materias';
 import { LibrosPage } from '../pages/libros/libros';
 import { MateriasPage } from '../pages/materias/materias';
-import { LoginPage } from '../pages/login/login';
+import { LoginPage } from '../pages/login/login';;
+import { BilibotecaServiceProvider } from '../providers/biliboteca-service/biliboteca-service';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { LoginPage } from '../pages/login/login';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NoticiasServicesProvider,
-    EmailComposer
+    EmailComposer,
+    BilibotecaServiceProvider
   ]
 })
 export class AppModule {}

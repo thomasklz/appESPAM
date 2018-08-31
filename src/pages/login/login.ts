@@ -22,14 +22,16 @@ export class LoginPage {
       contraseña: ['', Validators.required]
     });
 
+
+
   }
 
   logForm() {
     this.navCtrl.push(TabPage);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
+
+  
+
 
 }

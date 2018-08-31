@@ -24,7 +24,7 @@ export class NoticiaPage {
   ionViewDidLoad() {
     this.notiServe.getNoticias().subscribe(noticias => {
       this.arNoticias.push(noticias.data);
-      console.log(this.arNoticias);
+
     });
   }
 

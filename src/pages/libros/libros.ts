@@ -1,46 +1,33 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { BilibotecaServiceProvider } from '../../providers/biliboteca-service/biliboteca-service';
 
 @IonicPage()
 @Component({
   selector: 'page-libros',
   templateUrl: 'libros.html',
+  providers: [BilibotecaServiceProvider]
 })
 export class LibrosPage {
+  public txtbook: string;
   items: string[];
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.initializeItems();
+  public book: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public searchbookServe: BilibotecaServiceProvider) {
+    this.book = [];
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LibrosPage');
+   SearchBooks() {
+    this.searchbookServe.searchBook(this.txtbook).subscribe(books => {
+    console.log(books.Biblios);
+    this.book = books['Biblios'];
+    });
+  }
+
+  goToDetailBook(detailBook) {
+    this.navCtrl.push('DetalleLibrosPage', {
+      'id': detailBook
+    })
   }
   
-  initializeItems() {
-    this.items = [
-      'Amsterdam',
-      'Bogota',
-      'Kingston',
-      'Roma',
-      'Yakarta',
-      'Rabat'
-    ];
-  }
-
-  getItems(ev: any) {
-    // Reset items back to all of the items
-    this.initializeItems();
-
-    // set val to the value of the searchbar
-    let val = ev.target.value;
-
-    // if the value is an empty string don't filter the items
-    if (val && val.trim() != '') {
-      this.items = this.items.filter((item) => {
-        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
-      })
-    }
-  }
 
 }
